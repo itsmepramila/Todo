@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="{% static 'css/bootstrap.min.css' %}"
+          rel="stylesheet"
+          >
+</head>
+<body>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'image/logo.png' %}" alt="Logo" width="100" height="50" class="d-inline-block align-text-top">
+        TODO
+      </a>
+    </div>
+  </nav>
+    <div class="container-fluid">
+       {% block content %}
+       {% endblock content %}
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

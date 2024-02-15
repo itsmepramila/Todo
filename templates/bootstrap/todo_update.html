@@ -1,0 +1,12 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleInputTitle" class="form-label">Title</label>
+        <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="titleHelp" value="{{ todo.title }}" name="title">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock content %}
